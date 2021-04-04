@@ -19,6 +19,7 @@ Mail Track Service allows you to create and track emails
 1. `bash scripts/install-hooks.bash` for rubocop checks
 1. Start Server - `bundle exec rails s`
 1. Start Sidekiq `bundle exec sidekiq`
+1. `bin\spring stop` if required and doesn't work properly
 
 ***Note*** - Using env variables of `application.yml` instead of encrypted credentials for easy deployment to heroku
 

@@ -1,8 +1,8 @@
-EMAIL:
-  FROM: 'info@decabits.com'
-  USERNAME: 'info@decabits.com'
-  PASSWORD: <YOUR_PASSWORD>
-  HOST_URL: 'localhost'
-  HOST_PORT: 2525
-  HOST_ADDRESS: 'smtp.elasticemail.com'
-  DOMAIN: 'decabits.com'
+EMAIL_FROM: 'info@decabits.com'
+EMAIL_USERNAME: 'info@decabits.com'
+EMAIL_PASSWORD: <Your Password>
+EMAIL_HOST_URL: 'localhost'
+EMAIL_HOST_PORT: 2525
+EMAIL_HOST_ADDRESS: 'smtp.elasticemail.com'
+EMAIL_DOMAIN: 'decabits.com'
+API_TOKEN: <Your api access token>

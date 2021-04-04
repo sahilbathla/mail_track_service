@@ -27,6 +27,9 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+# Maintain environment variables
+gem 'figaro', '~> 1.2.0'
+
 # Sidekiq gem for async jobs via workers
 gem 'sidekiq', '~> 6.1.2'
 

@@ -1,0 +1,4 @@
+<%= @email.content.html_safe %>
+<br>
+Powered By: <%= image_tag('tracking.png') %>
+Powered By: <%= url_for(track_api_emails_url(email_unique_id: @email.unique_id)) %>

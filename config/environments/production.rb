@@ -65,15 +65,15 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "mail_track_service_production"
 
   # Mailer config
-  config.action_mailer.default_url_options = { host: ENV['EMAIL']['HOST_URL'] }
+  config.action_mailer.default_url_options = { host: Figaro.env.email_host_url }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.smtp_settings = {
-    address: ENV['EMAIL']['HOST_ADDRESS'],
-    port: ENV['EMAIL']['HOST_PORT'],
-    domain: ENV['EMAIL']['DOMAIN'],
-    user_name: ENV['EMAIL']['USERNAME'],
-    password: ENV['EMAIL']['PASSWORD'],
+    address: Figaro.env.email_host_address,
+    port: Figaro.env.email_host_port,
+    domain: Figaro.env.email_domain,
+    user_name: Figaro.env.email_username,
+    password: Figaro.env.email_password,
     authentication: 'plain',
     enable_starttls_auto: true
   }
