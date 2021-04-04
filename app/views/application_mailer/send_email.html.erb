@@ -1,4 +1,3 @@
 <%= @email.content.html_safe %>
 <br>
-Powered By: <%= image_tag('tracking.png') %>
-Powered By: <%= url_for(track_api_emails_url(email_unique_id: @email.unique_id)) %>
+Powered By: <img src="<%= url_for(track_api_emails_url(email_unique_id: @email.unique_id)) %>" alt="Powered By" title="Powered by Mail Track" style="display:block" width="25" height="25"></img>
