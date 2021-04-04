@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Api
   class BaseApiController < ActionController::API
     before_action :authenticate!
@@ -14,8 +16,8 @@ module Api
 
     def authenticate!
       return if request.headers['Authorization'] == Figaro.env.api_token && !Figaro.env.api_token.nil?
-        
-      render json:  {message: I18n.t('unauthorized') }, status: :unauthorized
+
+      render json: { message: I18n.t('unauthorized') }, status: :unauthorized
     end
   end
 end

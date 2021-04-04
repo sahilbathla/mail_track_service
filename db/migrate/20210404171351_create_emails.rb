@@ -7,9 +7,10 @@ class CreateEmails < ActiveRecord::Migration[6.1]
       t.text 'subject'
       t.string 'cc'
       t.string 'bcc'
-      t.string 'unique_id', unique: true
+      t.string 'unique_id'
       t.string 'tracking_url'
       t.datetime 'opened_at' 
+      t.index :unique_id, unique: true
 
       t.timestamps
     end

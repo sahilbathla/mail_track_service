@@ -8,7 +8,7 @@ module Emails
     end
 
     def call
-      email = Email.create!(email_params)
+      Email.create!(email_params)
       success(:email_creation_passed)
     rescue StandardError => e
       # Todo

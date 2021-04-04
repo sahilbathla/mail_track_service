@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2021_04_04_171351) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["from"], name: "index_emails_on_from"
     t.index ["to"], name: "index_emails_on_to"
+    t.index ["unique_id"], name: "index_emails_on_unique_id", unique: true
   end
 
 end

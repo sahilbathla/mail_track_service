@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 class Email < ApplicationRecord
   # Validations
   validates :to, :from, :subject, :content, :unique_id, presence: true
   validates :unique_id, uniqueness: true
-  validates_format_of :from, with: Constants::Regex::EMAIL
-  validates_format_of :to, with: Constants::Regex::COMMA_SEPARATED_EMAIL
-  validates_format_of :bcc, :cc, with: Constants::Regex::COMMA_SEPARATED_EMAIL, allow_nil: true, allow_blank: true
+  validates :from, format: { with: Constants::Regex::EMAIL }
+  validates :to, format: { with: Constants::Regex::COMMA_SEPARATED_EMAIL }
+  validates :bcc, :cc, format: { with: Constants::Regex::COMMA_SEPARATED_EMAIL, allow_blank: true }
 
   # Callbacks
   before_create :assign_tracking_url

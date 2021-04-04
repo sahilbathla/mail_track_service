@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Api
   class EmailsController < BaseApiController
     def create
@@ -6,7 +8,7 @@ module Api
     end
 
     def track
-      result = Emails::Track.new(params).call
+      Emails::Track.new(params).call
       send_file 'public/apple-touch-icon.png', type: 'image/png', disposition: 'inline'
     end
   end
