@@ -23,7 +23,7 @@
             <td><%= email.to %></td>
             <td><%= email.subject %></td>
             <td><%= truncate(email.content.html_safe) %></td>
-            <td><%= email.opened_at || 'Not Opened yet' %></td>
+            <td><%= email.opened_at || I18n.t('not-opened') %></td>
             <td><%= email.email_trackings&.first&.ip || 'N/A' %></td>
             <td><%= truncate(email.email_trackings&.first&.user_agent || 'N/A') %></td>
           </tr>

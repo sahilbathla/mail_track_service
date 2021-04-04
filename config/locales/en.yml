@@ -31,3 +31,4 @@
 
 en:
   unauthorized: 'You are unauthorized, please set/check your api token in config file.' 
+  not-opened: 'Not Opened Yet'

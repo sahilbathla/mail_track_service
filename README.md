@@ -43,7 +43,7 @@ curl --location --request POST 'https://mail-tracker-service.herokuapp.com/api/e
 ```
 
 1. If mail goes in spam, make sure to move it to inbox and open it again on email client.
-1. Login to the dashboard at `https://mail-tracker-service.herokuapp.com` with credentials
+1. Login to the dashboard at [https://mail-tracker-service.herokuapp.com](https://mail-tracker-service.herokuapp.com) with credentials
 
 ```
 username: admin
