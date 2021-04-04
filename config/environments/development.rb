@@ -1,4 +1,6 @@
-require "active_support/core_ext/integer/time"
+# frozen_string_literal: true
+
+require 'active_support/core_ext/integer/time'
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
@@ -42,10 +44,10 @@ Rails.application.configure do
     port: ENV['EMAIL']['HOST_PORT'],
     domain: ENV['EMAIL']['DOMAIN'],
     user_name: ENV['EMAIL']['USERNAME'],
-    password:  ENV['EMAIL']['PASSWORD'],
+    password: ENV['EMAIL']['PASSWORD'],
     authentication: 'plain',
     enable_starttls_auto: true
- }
+  }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
