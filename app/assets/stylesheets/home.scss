@@ -1,0 +1,16 @@
+.email-list {
+  width: 80%;
+  margin: auto;
+
+  table {
+    display:table;
+    width:100%;
+    table-layout:fixed;
+  }
+  td, th {
+    display:table-cell;
+    width:100px;
+    padding: 5px;
+    text-align: center;
+  }
+}

@@ -6,3 +6,5 @@ EMAIL_HOST_PORT: 2525
 EMAIL_HOST_ADDRESS: 'smtp.elasticemail.com'
 EMAIL_DOMAIN: 'decabits.com'
 API_TOKEN: <Your api access token>
+DASHBOARD_USER_NAME: admin
+DASHBOARD_USER_PASSWORD: <Your admin password>
