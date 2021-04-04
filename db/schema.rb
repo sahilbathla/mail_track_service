@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_04_171351) do
+ActiveRecord::Schema.define(version: 2021_04_04_194705) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "email_trackings", force: :cascade do |t|
+    t.bigint "email_id"
+    t.string "ip"
+    t.string "user_agent"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["email_id"], name: "index_email_trackings_on_email_id"
+  end
 
   create_table "emails", force: :cascade do |t|
     t.text "content"

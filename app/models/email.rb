@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 class Email < ApplicationRecord
+  # Associations
+  has_many :email_trackings, dependent: :destroy
+
   # Validations
   validates :to, :from, :subject, :content, :unique_id, presence: true
   validates :unique_id, uniqueness: true
