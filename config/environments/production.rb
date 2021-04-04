@@ -62,7 +62,19 @@ Rails.application.configure do
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "mail_track_service_production"
 
-  config.action_mailer.perform_caching = false
+  # Mailer config
+  config.action_mailer.default_url_options = { host: ENV['EMAIL']['HOST_URL'] }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.smtp_settings = {
+    address: ENV['EMAIL']['HOST_ADDRESS'],
+    port: ENV['EMAIL']['HOST_PORT'],
+    domain: ENV['EMAIL']['DOMAIN'],
+    user_name: ENV['EMAIL']['USERNAME'],
+    password:  ENV['EMAIL']['PASSWORD'],
+    authentication: 'plain',
+    enable_starttls_auto: true
+ }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
